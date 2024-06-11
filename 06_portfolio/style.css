@@ -1,0 +1,385 @@
+img {
+  max-width: 100%;
+}
+
+.site_img {
+  max-width: 65%;
+  margin: 0 auto;
+  margin-top: 0px;
+  display: block;
+  margin-top: 6%;
+}
+
+.logo_img {
+  max-width: 50%;
+  margin-left: -10%;
+}
+
+@font-face {
+  font-family: sometimes;
+  src: url(fonts/Sometimes\ Times\ Regular.ttf);
+}
+
+@font-face {
+  font-family: agrandir;
+  src: url(fonts/Agrandir.ttf);
+}
+
+@font-face {
+  font-family: sainte colombe;
+  src: url(fonts/Sainte\ Colombe\ Light.ttf);
+}
+
+header,
+body,
+footer {
+  background-color: #efece9;
+}
+
+h1 {
+  font-family: sometimes;
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: #065ad5;
+  margin-left: 3%;
+}
+
+h2 {
+  font-family: sometimes;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #065ad5;
+  text-align: right;
+  margin-right: 3%;
+}
+
+.smaller {
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: agrandir;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  color: #065ad5;
+  margin: 0;
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+h4 {
+  font-family: sainte colombe;
+  font-style: italic;
+  font-weight: bolder;
+  margin-left: 3%;
+  margin-top: 10%;
+  margin-bottom: -1%;
+}
+
+.p_index {
+  margin-left: 3%;
+  margin-right: 3%;
+  max-width: 65ch;
+  font-family: sainte colombe;
+}
+
+.p_about {
+  margin-left: 3%;
+  margin-right: 3%;
+  max-width: 65ch;
+  font-family: sainte colombe;
+}
+
+.p_left {
+  margin-left: 3%;
+  margin-right: 3%;
+  max-width: 65ch;
+  font-family: sainte colombe;
+}
+
+.work_flex svg {
+  transform: rotate(90deg);
+  margin-top: 2%;
+  scale: 0.8;
+}
+
+.arrow_hover {
+  transition: transform 0.2s ease;
+}
+.arrow_hover:hover {
+  transform: scale(1.3);
+}
+
+.cv_flex svg {
+  transform: rotate(90deg);
+  margin-top: 0;
+  scale: 0.8;
+}
+
+.back_svg {
+  margin-left: 3%;
+  scale: 0.8;
+}
+
+.back_svg {
+  transition: transform 0.2s ease;
+}
+.back_svg:hover {
+  transform: scale(1.3);
+}
+
+.tekst_diagram {
+  font-family: sainte colombe;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.visit_link {
+  font-family: agrandir;
+  color: black;
+  transition: color 0.2s ease-in-out;
+}
+
+.visit_link:hover {
+  color: #065ad5;
+}
+
+.visit_container {
+  margin-top: 3%;
+  text-align: center;
+}
+
+.hidden_info {
+  display: none;
+}
+
+.hidden_info li {
+  font-family: sainte colombe;
+  margin: 2%;
+}
+
+.hidden_info p {
+  font-family: agrandir;
+  font-size: 1.5rem;
+  margin-left: 3%;
+  color: #065ad5;
+}
+
+.toggle_arrow .rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+.footer_text {
+  font-family: sometimes;
+  font-size: 1.2rem;
+  color: #065ad5;
+
+  text-align: center;
+}
+
+.footer_img {
+  margin: 0 auto;
+  margin-top: 5%;
+  display: block;
+  scale: 0.8;
+}
+
+/***** ANIMATIONS *****/
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floatSway {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, -5px) rotate(2deg);
+  }
+  50% {
+    transform: translate(0, -10px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-10px, -5px) rotate(-2deg);
+  }
+}
+
+@keyframes buzz {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(-2px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(2px, 2px) rotate(1deg);
+  }
+  30% {
+    transform: translate(-2px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(2px, -2px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-2px, -2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(2px, 2px) rotate(0deg);
+  }
+  70% {
+    transform: translate(-2px, 2px) rotate(1deg);
+  }
+  80% {
+    transform: translate(2px, -2px) rotate(-1deg);
+  }
+  90% {
+    transform: translate(-2px, -2px) rotate(0deg);
+  }
+}
+
+@keyframes slow-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes weave {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+.street_index {
+  display: inline-block;
+  animation: floatSway 4s ease-in-out infinite;
+}
+
+.bee_02 {
+  animation: buzz 0.8s infinite;
+}
+
+.flower_03 {
+  animation: slow-spin 10s linear infinite;
+}
+
+.star_04 {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.starfish_05 {
+  animation: weave 2s ease-in-out infinite;
+}
+
+.clam_about {
+  animation: sway 2s infinite;
+}
+
+@media (min-width: 650px) {
+  h1 {
+    font-size: 5rem;
+    margin-left: 6%;
+    margin-top: -2%;
+  }
+
+  h2 {
+    font-size: 5rem;
+    margin-right: 6%;
+  }
+
+  .smaller {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    margin-top: 1%;
+    margin-left: 2%;
+  }
+
+  h4 {
+    margin-left: 10%;
+    font-size: 1.5rem;
+    margin-top: 4%;
+    margin-bottom: 1%;
+  }
+  .p_index {
+    margin-left: 6%;
+  }
+
+  .p_left {
+    margin-left: 10%;
+  }
+
+  .p_about {
+    margin-left: 6%;
+  }
+
+  .hidden_info p {
+    margin-left: 2%;
+  }
+
+  .work_flex svg {
+    margin-top: 8%;
+    scale: 1;
+  }
+
+  .back_svg {
+    margin-left: 6%;
+    scale: 1;
+  }
+
+  .cv_flex svg {
+    transform: rotate(90deg);
+    margin-left: 6%;
+    scale: 1;
+  }
+
+  #cv {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  #work {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  .footer_text {
+    font-size: 2rem;
+  }
+}

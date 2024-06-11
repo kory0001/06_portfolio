@@ -1,0 +1,320 @@
+/*****************************  BURGERMENU  ******************************/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  top: 0;
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: -20%;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: #065ad5;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+/******************************  MENU  ********************************/
+
+@font-face {
+  font-family: agrandir;
+  src: url(fonts/Agrandir.ttf);
+}
+header a {
+  font-family: agrandir;
+  font-weight: normal;
+}
+
+header .logo a {
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: normal;
+}
+
+.logo_tekst {
+  font-family: agrandir;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-bottom: 0.4rem;
+  gap: 30px;
+  overflow-x: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/****** FORSIDE ****/
+
+.work_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid_velkommen img {
+  margin: 0 auto;
+  display: block;
+}
+
+.work_grid img {
+  display: none;
+}
+
+/****** ABOUT ****/
+
+.portrait {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 8%;
+  display: block;
+}
+
+.cv_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid_cv img {
+  margin: 0 auto;
+  margin-top: 15%;
+  display: block;
+  scale: 0.8;
+}
+
+/********* 02 WEB *********/
+.grid_02web1 img {
+  margin: 0 auto;
+  display: block;
+}
+
+.grid_02web2 img {
+  display: none;
+}
+
+/********* 03 UX/UI *********/
+
+.grid_03uxui1 img {
+  margin: 0 auto;
+  display: block;
+}
+
+/********* 04 ANIMATION *********/
+.grid_04animation1 img {
+  margin: 0 auto;
+  display: block;
+}
+.grid_04animation2 img {
+  display: none;
+}
+.grid_03uxui2 img {
+  display: none;
+}
+
+.grid_04_diagram img {
+  margin: 0 auto;
+  display: block;
+  max-width: 80%;
+}
+
+/********* 05 INDHOLD *********/
+.grid_05indhold1 img {
+  margin: 0 auto;
+  display: block;
+}
+.grid_05indhold2 {
+  display: none;
+}
+
+@media (min-width: 650px) {
+  /***** GRID FORSIDE *****/
+  .grid_velkommen {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .work_grid {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+  }
+
+  .work_grid img {
+    display: grid;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /***** GRID ABOUT *****/
+  .grid_about {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .portrait {
+    max-width: 90%;
+    margin-right: 20%;
+    margin-top: 0%;
+  }
+
+  .grid_cv {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .grid_cv img {
+    display: grid;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /****** GRID 02_WEB ****/
+
+  .grid_02web1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .grid_02web2 img {
+    display: inline;
+  }
+  .grid_02web2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  /****** GRID 03_UX/UI ****/
+
+  .grid_03uxui1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .grid_03uxui2 img {
+    display: inline;
+  }
+  .grid_03uxui2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  /****** GRID 04_ANIMATION ****/
+
+  .grid_04animation1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .grid_04animation2 img {
+    display: inline;
+  }
+  .grid_04animation2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .grid_04_diagram img {
+    max-width: 90%;
+  }
+
+  .grid_04_diagram {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+  }
+
+  /****** GRID 05_INDHOLD ****/
+
+  .grid_05indhold1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .grid_05indhold2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
